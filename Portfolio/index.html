@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Quratulain</span> <br> Akram from Pakistan</h1> 
+            </div>
+        </div>
+    </div>
+    <!------------------about--------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Black bg- 1.jpeg" >
+                </div>
+                <div class="about-col-2">
+
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm an undergraduate student of BS Computer Science pursuing my degree from University of Punjab scoring a good cgpa of 3.47. 
+                        Hi, I'm an undergraduate student of BS Computer Science pursuing my degree from University of Punjab scoring a good cgpa of 3.47. 
+                        Hi, I'm an undergraduate student of BS Computer Science pursuing my degree from University of Punjab scoring a good cgpa of 3.47. 
+                        Hi, I'm an undergraduate student of BS Computer Science pursuing my degree from University of Punjab scoring a good cgpa of 3.47.  
+                    </p>
+
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML/CSS</span><br>Frontend Web Development</li>
+                            <li><span>C/C++</span><br>Programming Fundamentals/Data Structures</li>
+                            <li><span>Java</span><br>Data Structures & Algorithm</li>
+                            <li><span>C#</span><br>Web Applications(MVC Framework)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Present</span><br>Web Development Internship at CodSoft</li>
+                            <li><span>2021 - 2023</span><br>Content Writing Freelancer at Upwork</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - 2024</span><br>Bachelors in Computer Science, BSCS <br>University of the Punjab<br>CGPA: 3.47 till 7th Semester</li>
+                            <li><span>2018 - 2020</span><br>FSC pre-engineering, Intermediate <br>Govt. Post Graduate College for Women(Wahdat Road) </li>
+                            <li><span>2016 - 2018</span><br>Matriculation, Science Group <br>Govt Girls Higher Secondary School Lahore</li>
+                            <li><span>2016 - 2018</span><br>Matriculation, Science Group <br>Govt Girls Higher Secondary School Lahore</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
