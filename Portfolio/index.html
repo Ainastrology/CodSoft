@@ -13,14 +13,16 @@
         <div class="container">
             <nav>
                 <img src="Images/Logo-removebg-preview.png" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Resume</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full Stack Developer</p>
@@ -33,7 +35,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="Images/New Image 4.jpeg" >
+                    <img src="Images/WhatsApp Image 2024-03-29 at 8.31.58 PM.jpeg" >
                 </div>
                 <div class="about-col-2">
 
@@ -209,6 +211,7 @@
                     <a href="#"><i class="fa-regular fa-envelope"></i></a>
                 </div>
                 <a href="Images/Quratulain's Resume (2).pdf" download class="btn btn2">Download CV</a>
+                <img src="Images/WhatsApp Image 2024-03-29 at 8.31.58 PM.jpeg" class="myPic">
             </div>
             <div class="contact-right">
                 <form>
@@ -221,7 +224,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright © Qurat. Made by Quratulain</p>
+        <p>2024 Copyright © Qurat. Made by Quratulain</p>
     </div>
 </div>
 <script>
@@ -239,6 +242,16 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
+</script>
+
+<script>
+    var sideMenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sideMenu.style.right = "0";
+    }
+    function closemenu(){
+        sideMenu.style.right = "-200px";
+    }
 </script>
 
 </body>
